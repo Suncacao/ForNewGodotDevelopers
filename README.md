@@ -31,6 +31,7 @@ Audio playback in this project uses the Sound Manager plugin.
 Plugin link:  
 https://godotengine.org/asset-library/asset/2048
 
+also,BGM by MaouDamashii
 ---
 
 ## Localization System
