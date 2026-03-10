@@ -1,0 +1,311 @@
+[gd_scene load_steps=6 format=3 uid="uid://bago2rnfxcvgb"]
+
+[ext_resource type="Script" uid="uid://bsdyugifpy70d" path="res://Script/StartScene.cs" id="1_4vj8e"]
+[ext_resource type="AudioStream" uid="uid://b1rsndwgmnlpf" path="res://maou_game_village05.mp3" id="2_aorkf"]
+[ext_resource type="Script" uid="uid://bbx7qqbd7jiq6" path="res://Script/LoadLangforLable.cs" id="2_vhwsv"]
+[ext_resource type="AudioStream" uid="uid://d3l31a76ggy1u" path="res://SE/Sound/btnmove.mp3" id="5_tfajq"]
+[ext_resource type="AudioStream" uid="uid://bx0w5kb5m2dpr" path="res://SE/Sound/selected.mp3" id="6_c7wkd"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_4vj8e")
+MusicSample = ExtResource("2_aorkf")
+SoundbtnmoveSample = ExtResource("5_tfajq")
+SoundseletedSample = ExtResource("6_c7wkd")
+
+[node name="DemoCanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control_RightTOP" type="Control" parent="DemoCanvasLayer"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="BGMLayOut" type="Control" parent="DemoCanvasLayer/Control_RightTOP"]
+anchors_preset = 0
+offset_top = 2.0
+offset_right = 40.0
+offset_bottom = 42.0
+
+[node name="BGMLabel" type="Label" parent="DemoCanvasLayer/Control_RightTOP/BGMLayOut"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -578.0
+offset_top = -7.0
+offset_right = -299.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "BGM"
+
+[node name="AddPower" type="Button" parent="DemoCanvasLayer/Control_RightTOP/BGMLayOut"]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 18.0
+offset_right = 30.0
+offset_bottom = 81.0
+theme_override_font_sizes/font_size = 40
+text = "+"
+
+[node name="LessPower" type="Button" parent="DemoCanvasLayer/Control_RightTOP/BGMLayOut"]
+layout_mode = 0
+offset_left = -239.0
+offset_top = 19.0
+offset_right = -171.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 40
+text = "-"
+
+[node name="Value" type="Label" parent="DemoCanvasLayer/Control_RightTOP/BGMLayOut"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -193.0
+offset_top = -13.0
+offset_right = -45.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "100"
+
+[node name="SFXLayOut" type="Control" parent="DemoCanvasLayer/Control_RightTOP"]
+anchors_preset = 0
+offset_left = -1.0
+offset_top = 107.0
+offset_right = 39.0
+offset_bottom = 147.0
+
+[node name="SFXLabel" type="Label" parent="DemoCanvasLayer/Control_RightTOP/SFXLayOut"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -580.0
+offset_top = -34.0
+offset_right = -301.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "SFX"
+
+[node name="AddPower" type="Button" parent="DemoCanvasLayer/Control_RightTOP/SFXLayOut"]
+layout_mode = 0
+offset_left = -40.0
+offset_top = -9.0
+offset_right = 28.0
+offset_bottom = 54.0
+theme_override_font_sizes/font_size = 40
+text = "+"
+
+[node name="LessPower" type="Button" parent="DemoCanvasLayer/Control_RightTOP/SFXLayOut"]
+layout_mode = 0
+offset_left = -241.0
+offset_top = -8.0
+offset_right = -173.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 40
+text = "-"
+
+[node name="Value" type="Label" parent="DemoCanvasLayer/Control_RightTOP/SFXLayOut"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.0
+offset_top = -40.0
+offset_right = -47.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "100"
+
+[node name="Control_LeftTOP" type="Control" parent="DemoCanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ChangeLabel" type="Label" parent="DemoCanvasLayer/Control_LeftTOP"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = 57.0
+offset_right = 1156.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Press the button to change the language"
+script = ExtResource("2_vhwsv")
+loadKey = "ChangeButton"
+
+[node name="HelloWorldLabel" type="Label" parent="DemoCanvasLayer/Control_LeftTOP"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = 168.0
+offset_right = 1040.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "Hello World"
+script = ExtResource("2_vhwsv")
+loadKey = "ProjectName"
+
+[node name="ChangeLanguage" type="Button" parent="DemoCanvasLayer/Control_LeftTOP"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 123.0
+offset_right = 355.0
+offset_bottom = 186.0
+theme_override_font_sizes/font_size = 40
+text = "ChangeLanguage"
+
+[node name="Control_LeftBOT" type="Control" parent="DemoCanvasLayer"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="1920X1080" type="Button" parent="DemoCanvasLayer/Control_LeftBOT"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = -99.0
+offset_right = 246.0
+offset_bottom = -36.0
+theme_override_font_sizes/font_size = 40
+text = "1920 X 1080"
+
+[node name="1366X768" type="Button" parent="DemoCanvasLayer/Control_LeftBOT"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = -167.0
+offset_right = 246.0
+offset_bottom = -104.0
+theme_override_font_sizes/font_size = 40
+text = "1366 X 768
+"
+
+[node name="1280X720" type="Button" parent="DemoCanvasLayer/Control_LeftBOT"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = -235.0
+offset_right = 246.0
+offset_bottom = -172.0
+theme_override_font_sizes/font_size = 40
+text = "1280 X 720"
+
+[node name="ChangeFullScreen" type="Button" parent="DemoCanvasLayer/Control_LeftBOT"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = -32.0
+offset_right = 362.0
+offset_bottom = 31.0
+theme_override_font_sizes/font_size = 40
+text = "ChangeFullScreen"
+
+[node name="Control_RightBOT" type="Control" parent="DemoCanvasLayer"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="SoundTestControl" type="Control" parent="DemoCanvasLayer/Control_RightBOT"]
+anchors_preset = 0
+offset_left = -7.0
+offset_top = -3.0
+offset_right = 33.0
+offset_bottom = 37.0
+
+[node name="PlayBGM" type="Button" parent="DemoCanvasLayer/Control_RightBOT/SoundTestControl"]
+layout_mode = 0
+offset_left = -488.0
+offset_top = -98.0
+offset_right = -243.0
+offset_bottom = -35.0
+theme_override_font_sizes/font_size = 40
+text = "PlayBGM"
+
+[node name="PauseBGM" type="Button" parent="DemoCanvasLayer/Control_RightBOT/SoundTestControl"]
+layout_mode = 0
+offset_left = -487.0
+offset_top = -29.0
+offset_right = -242.0
+offset_bottom = 34.0
+theme_override_font_sizes/font_size = 40
+text = "PauseBGM"
+
+[node name="ResumeBGM" type="Button" parent="DemoCanvasLayer/Control_RightBOT/SoundTestControl"]
+layout_mode = 0
+offset_left = -225.0
+offset_top = -28.0
+offset_right = 30.0
+offset_bottom = 35.0
+theme_override_font_sizes/font_size = 40
+text = "ResumeBGM"
+
+[node name="StopBGM" type="Button" parent="DemoCanvasLayer/Control_RightBOT/SoundTestControl"]
+layout_mode = 0
+offset_left = -225.0
+offset_top = -99.0
+offset_right = 30.0
+offset_bottom = -36.0
+theme_override_font_sizes/font_size = 40
+text = "StopBGM"
+
+[node name="SELise" type="Node" parent="."]
+
+[node name="SEbtnmove" type="AudioStreamPlayer" parent="SELise"]
+stream = ExtResource("5_tfajq")
+
+[node name="SEselected" type="AudioStreamPlayer" parent="SELise"]
+stream = ExtResource("6_c7wkd")
+
+[connection signal="mouse_entered" from="DemoCanvasLayer/Control_RightTOP/BGMLayOut/AddPower" to="." method="MouseEnterEvent"]
+[connection signal="mouse_entered" from="DemoCanvasLayer/Control_RightTOP/BGMLayOut/LessPower" to="." method="MouseEnterEvent"]
+[connection signal="mouse_entered" from="DemoCanvasLayer/Control_RightTOP/SFXLayOut/AddPower" to="." method="MouseEnterEvent"]
+[connection signal="mouse_entered" from="DemoCanvasLayer/Control_RightTOP/SFXLayOut/LessPower" to="." method="MouseEnterEvent"]
+[connection signal="mouse_entered" from="DemoCanvasLayer/Control_LeftTOP/ChangeLanguage" to="." method="MouseEnterEvent"]
+[connection signal="mouse_entered" from="DemoCanvasLayer/Control_LeftBOT/1920X1080" to="." method="MouseEnterEvent"]
+[connection signal="mouse_entered" from="DemoCanvasLayer/Control_LeftBOT/1366X768" to="." method="MouseEnterEvent"]
+[connection signal="mouse_entered" from="DemoCanvasLayer/Control_LeftBOT/1280X720" to="." method="MouseEnterEvent"]
+[connection signal="mouse_entered" from="DemoCanvasLayer/Control_LeftBOT/ChangeFullScreen" to="." method="MouseEnterEvent"]
+[connection signal="mouse_entered" from="DemoCanvasLayer/Control_RightBOT/SoundTestControl/PlayBGM" to="." method="MouseEnterEvent"]
+[connection signal="mouse_entered" from="DemoCanvasLayer/Control_RightBOT/SoundTestControl/PauseBGM" to="." method="MouseEnterEvent"]
+[connection signal="mouse_entered" from="DemoCanvasLayer/Control_RightBOT/SoundTestControl/ResumeBGM" to="." method="MouseEnterEvent"]
+[connection signal="mouse_entered" from="DemoCanvasLayer/Control_RightBOT/SoundTestControl/StopBGM" to="." method="MouseEnterEvent"]
