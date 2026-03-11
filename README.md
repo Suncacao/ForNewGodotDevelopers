@@ -43,6 +43,11 @@ All related files are included in the project for reference.
 
 This may help developers understand how a basic localization system can be implemented manually.
 
+Related files:
+LanguageManager.cs
+LanguageJsonData.cs
+LoadLangforLable.cs
+LocalizationManager.cs
 ---
 
 ## Purpose of This Project
